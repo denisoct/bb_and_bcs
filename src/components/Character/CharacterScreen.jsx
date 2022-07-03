@@ -19,11 +19,11 @@ const CharacterScreen = () => {
 
   return (
     <>
-      <div className="my-3 ml-3 flex gap-4">
+      <div className="my-3 ml-3 grid grid-cols-[1fr,2fr]">
         <img
           src={img}
           alt={character}
-          className="w-1/2 animate-backInUp rounded-sm"
+          className="animate-backInUp rounded-sm"
         />
         <div className="ml-6">
           <h3 className="mb-2 text-2xl font-bold">{name}</h3>
@@ -53,7 +53,7 @@ const CharacterScreen = () => {
           <p className="ml-2">{characters}</p> */}
 
           <button
-            className="mt-4 rounded-lg border-2 border-cyan-700 p-2 text-cyan-700 transition-all duration-500 ease-in-out hover:bg-cyan-500 hover:text-black"
+            className="mt-4 rounded-md bg-blue-500 py-2 px-4 font-bold text-zinc-200 transition-all duration-300 ease-linear hover:bg-blue-800 hover:text-white"
             onClick={handleReturn}
           >
             Regresar
