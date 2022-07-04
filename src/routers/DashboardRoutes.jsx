@@ -10,18 +10,13 @@ import NavBar from "../ui/NavBar";
 const DashBoardRoutes = () => {
   return (
     <>
+      <NavBar />
       <div className="min-h-screen w-full">
-        <NavBar />
         <Routes>
           <Route path="/" element={<BreakingBadScreen />} />
           <Route path="/breaking-bad" element={<BreakingBadScreen />} />
           <Route path="/better-call-saul" element={<BetterCallSaul />} />
           <Route path="/character/:charId" element={<CharacterScreen />} />
-          {/* <Route path="/marvel" element={<MarvelScreen />} />
-          <Route path="/dc" element={<DcScreen />} />
-          <Route path="/search" element={<SearchScreen />} />
-          <Route path="/hero/:heroeId" element={<HeroScreen />} />
-          <Route path="/" element={<MarvelScreen />} /> */}
         </Routes>
       </div>
     </>
