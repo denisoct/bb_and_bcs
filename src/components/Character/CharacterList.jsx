@@ -12,7 +12,7 @@ const CharacterList = ({ category }) => {
           category === "Breaking Bad" ? "via-[#07321d]" : "via-[#413b04]"
         } to-black`}
       ></div>
-      <div className="mb-4 grid animate-fadeIn grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mb-4 grid animate-fadeIn grid-cols-1 justify-items-stretch  gap-5 md:grid-cols-2 xl:grid-cols-3">
         {characters.map((character) => (
           <CharacterCard key={character.char_id} {...character} />
         ))}

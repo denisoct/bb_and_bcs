@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const CharacterCard = ({ char_id, img, name, nickname, portrayed }) => {
   return (
     <>
-      <div className="group flex animate-fadeIn gap-4 overflow-hidden rounded-lg border-[1px] border-[#FAF3E3] text-white transition-all duration-200 ease-in-out hover:border-[2px] hover:border-[#FAF3E3] hover:shadow-lg ">
+      <div className="group flex h-96 min-h-[384px] w-full min-w-[400px] animate-fadeIn gap-4 overflow-hidden rounded-lg border-[1px] border-[#FAF3E3] font-[Nunito] text-white hover:border-[2px] hover:border-[#FAF3E3] hover:shadow-lg 2xl:h-auto 2xl:max-h-[500px] 2xl:max-w-[700px]">
         <div className="relative w-1/2 flex-none">
           <img
             src={img}
@@ -17,9 +17,7 @@ const CharacterCard = ({ char_id, img, name, nickname, portrayed }) => {
             <span className="block text-[1.1rem] text-zinc-400">
               {nickname}
             </span>
-            <span className="text-md mt-4 block text-right font-[Nunito]">
-              {portrayed}
-            </span>
+            <span className="text-md mt-4 block text-right">{portrayed}</span>
           </div>
 
           <div className="self-end">
