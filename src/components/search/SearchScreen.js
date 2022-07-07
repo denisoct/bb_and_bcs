@@ -23,27 +23,26 @@ export const SearchScreen = ()=>{
         navigate(`?q=${searchText}`);
     }
 
-
+    
     return(
-        <div class="mx-12">
-            <div class="text-4xl border-4 border-b-black">Busquedas</div>
+        <div class="bg-neutral-700 text-zinc-50">
             <hr/>
-            <div class="grid grid-cols-3 gap-4 ">
-                <div className='colums-5 space-y-4'>
-                    <p class="text-xl my-6">Buscar</p>   
+            <div class="grid grid-cols-2 justify-items-center">
+                <div class=''>
+                <div class="text-2xl text-zinc-50">Buscar </div>  
                     <hr/>
                     <form onSubmit={(e)=>handleSearch(e) }>
                     {/*<form onSubmit={handleSearch}>*/}
                         <input
                         type='text'
                         placeholder='Buscar un personaje'
-                        class='rounded-lg'
+                        class='rounded-lg bg-transparent rounded-md border-[1px] border-slate-500 py-2 px-4'
                         name='searchText'
                         autoComplete='off'
                         value={searchText}
                         onChange={handleInputChange}
                         />
-                        <button class="border-solid border-2 border-sky-500 rounded-lg ml-2 "
+                        <button class="mx-4 my-2 rounded-md border-[1px] border-slate-500 py-2 px-4 text-zinc-200 transition-all duration-300 ease-linear hover:text-white group-hover:border-none group-hover:bg-slate-800"
                         type='submit'
                         >
                             Buscar...
@@ -51,16 +50,17 @@ export const SearchScreen = ()=>{
 
                     </form>
                 </div>
-                <div className='col-7 space-y-4'>
-                    <div class="text-xl my-6">Resultados</div>
+                <div className=''>
+                    <div class="text-2xl text-zinc-50">Resultados</div>
                     <hr/>
                     {
                         (q==='')
-                            ?<div className='border-2 border-lime-400 rounded-lg'>Buscar un personaje</div>
+                            ?<div className='my-2 rounded-md border-[1px] border-lime-600 py-2 px-4'>Buscar un personaje</div>
                             :(CharacterFiltered.length===0)
-                                && <div className='border-2 border-rose-500 rounded-lg'>No hay resultado para:" {q}"</div>
+                                && <div className='my-2 rounded-md border-[1px] border-red-700 py-2 px-4'>No hay resultado para:" {q}"</div>
                     }
 
+                    <div class='my-2'>
                     {
                         CharacterFiltered.map( character =>(
                             <CharacterCard
@@ -69,6 +69,7 @@ export const SearchScreen = ()=>{
                             /> 
                         ))
                     }
+                    </div>
                 </div>
 
             </div>
