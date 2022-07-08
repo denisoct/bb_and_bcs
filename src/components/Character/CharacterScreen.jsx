@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { getCharacterById } from "../../selectors/getCharacterById";
-import BBLogo from "../../assets/BBLogo.png";
 import BCSLogo from "../../assets/BCSLogo.png";
+import BBdark from "../../assets/BBdark.png";
 
 const CharacterScreen = () => {
   const { charId } = useParams();
@@ -21,6 +21,7 @@ const CharacterScreen = () => {
     name,
     img,
     nickname,
+    occupation,
     portrayed,
     birthday,
     status,
@@ -34,37 +35,42 @@ const CharacterScreen = () => {
 
   return (
     <>
-      <div className="my-3 ml-3 flex flex-col lg:grid lg:grid-cols-[2fr,2fr] lg:justify-items-center">
+      <div className={"fixed inset-0 -z-10 bg-zinc-900"}></div>
+      <div className="my-3 flex flex-col text-white lg:grid lg:grid-cols-[2fr,2fr] lg:justify-items-center">
         <img
           src={img}
           alt={character}
           className="h-[400px] w-auto animate-fadeInDown rounded-sm object-scale-down object-top lg:h-[800px] lg:animate-fadeInLeft"
         />
-        <div className="lg:animate ml-6 mt-6 animate-fadeInUp animate-fadeInRightBig lg:justify-self-start">
+        <div className="lg:animate ml-6 mt-6 animate-fadeInUp animate-fadeInRightBig lg:mt-0 lg:justify-self-start">
           <h3 className="mb-4 text-2xl font-bold">{name}</h3>
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-3 ">
             <li className="">
               <b>Nickname: </b>
               {nickname}
             </li>
-            <li className="">
-              <b>Status: </b>
-              {status}
+            <li>
+              <b>Ocuppation: </b>
+              {occupation.join(", ")}
+            </li>
+            <li>
+              <b>Birthday: </b>
+              {birthday}
             </li>
             <li>
               <b>Portrayed: </b>
               {portrayed}
             </li>
-            <li>
-              <b>Birthday: </b>
-              {birthday}
+            <li className="">
+              <b>Status: </b>
+              {status}
             </li>
           </ul>
           <div className="flex flex-row">
             {categories.includes("Breaking Bad") && (
               <>
                 <img
-                  src={BBLogo}
+                  src={BBdark}
                   alt="BB logo"
                   className="h-36 object-center"
                 />
@@ -89,7 +95,7 @@ const CharacterScreen = () => {
                   alt="BCS logo"
                   className="h-36 object-center"
                 />
-                <div className="ml-12 flex flex-row items-center gap-3">
+                <div className="ml-10 flex flex-row items-center gap-3">
                   {better_call_saul_appearance.map((value, index) => (
                     <span
                       key={index}
