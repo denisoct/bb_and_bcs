@@ -11,8 +11,8 @@ import NavBar from "../ui/NavBar";
 const DashBoardRoutes = () => {
   return (
     <>
-      <NavBar />
       <div className="min-h-screen w-full">
+        <NavBar />
         <Routes>
           <Route path="/" element={<BreakingBadScreen />} />
           <Route path="/breaking-bad" element={<BreakingBadScreen />} />
