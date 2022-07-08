@@ -38,7 +38,7 @@ const CharacterScreen = () => {
         <img
           src={img}
           alt={character}
-          className="h-[600px] w-auto animate-fadeInDown rounded-sm object-scale-down object-top lg:h-[800px] lg:animate-fadeInLeft"
+          className="h-[400px] w-auto animate-fadeInDown rounded-sm object-scale-down object-top lg:h-[800px] lg:animate-fadeInLeft"
         />
         <div className="lg:animate ml-6 mt-6 animate-fadeInUp animate-fadeInRightBig lg:justify-self-start">
           <h3 className="mb-4 text-2xl font-bold">{name}</h3>
@@ -72,7 +72,7 @@ const CharacterScreen = () => {
                   {appearance.map((value, index) => (
                     <span
                       key={index}
-                      className="rounded-full bg-black py-2 px-4 text-white"
+                      className="cursor-pointer select-none rounded-full bg-slate-800 py-2 px-4 text-white hover:bg-cyan-700"
                     >
                       {value}
                     </span>
@@ -93,7 +93,7 @@ const CharacterScreen = () => {
                   {better_call_saul_appearance.map((value, index) => (
                     <span
                       key={index}
-                      className="rounded-full bg-black py-2 px-4 text-white"
+                      className="cursor-pointer select-none rounded-full bg-slate-800 py-2 px-4 text-white hover:bg-cyan-700"
                     >
                       {value}
                     </span>
@@ -104,7 +104,7 @@ const CharacterScreen = () => {
           </div>
 
           <button
-            className="mt-6 rounded-md bg-blue-500 py-2 px-4 font-bold text-zinc-200 transition-all duration-300 ease-linear hover:bg-blue-800 hover:text-white"
+            className="mt-6 flex flex-row gap-3 rounded-md border-none border-slate-500 bg-slate-700 py-2 px-4 text-[1.33rem] text-zinc-200 transition-all duration-300 ease-linear hover:border-none hover:bg-cyan-600 hover:text-white"
             onClick={handleReturn}
           >
             Regresar

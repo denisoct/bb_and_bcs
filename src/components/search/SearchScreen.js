@@ -27,32 +27,28 @@ export const SearchScreen = () => {
       <div
         className={"fixed inset-x-0 top-0 -z-10 h-full w-full bg-neutral-700"}
       ></div>
-      <div class="mt-4 px-4 font-[Nunito] text-zinc-50">
-        <div class="flex flex-row justify-around">
-          <div class="">
-            <div class="text-2xl text-zinc-50">Buscar</div>
+      <div className="mt-4 px-4 font-[Nunito] text-zinc-50">
+        <div className="grid grid-cols-[1fr,1fr] gap-40">
+          <div>
+            <div className="text-2xl text-zinc-50">Buscar</div>
             <hr />
-            <form
-              onSubmit={(e) => handleSearch(e)}
-              className="mt-2 flex flex-row"
-            >
-              {/*<form onSubmit={handleSearch}>*/}
+            <form onSubmit={handleSearch} className="mt-2 flex flex-row gap-5">
               <input
                 type="text"
                 placeholder="Buscar un personaje"
-                class="rounded-md border border-slate-500 bg-transparent py-2 px-4 focus:border-slate-900"
+                className="w-full rounded-md border border-slate-500 bg-transparent py-2 px-4 text-[1.33rem] focus:border-slate-900"
                 name="searchText"
                 autoComplete="off"
                 value={searchText}
                 onChange={handleInputChange}
               />
               <button
-                class="mx-4 my-2 flex flex-row gap-3 rounded-md border-none border-slate-500 bg-slate-700 py-2 px-4 text-zinc-200 transition-all duration-300 ease-linear hover:border-none hover:bg-slate-800 hover:text-white"
+                className="flex flex-row gap-3 rounded-md border-none border-slate-500 bg-slate-700 py-2 px-4 text-[1.33rem] text-zinc-200 transition-all duration-300 ease-linear hover:border-none hover:bg-slate-800 hover:text-white"
                 type="submit"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="h-5 w-5 self-center"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -66,21 +62,23 @@ export const SearchScreen = () => {
               </button>
             </form>
           </div>
-          <div className="">
-            <div class="text-2xl text-zinc-50">Resultados</div>
+          <div>
+            <div className="text-2xl text-zinc-50">Resultados</div>
             <hr />
             {q === "" ? (
-              <div className="mt-2 rounded-md py-2">Busque un personaje</div>
+              <div className="mt-2 rounded-md py-2 text-[1.33rem] text-white/70">
+                Busque un personaje
+              </div>
             ) : (
               CharacterFiltered.length === 0 && (
-                <div className="my-2 rounded-md py-2 px-4 text-red-400">
-                  No hay resultado para:" {q}"
+                <div className="my-2 rounded-md py-2 text-[1.33rem] text-red-400">
+                  No hay resultado para: <span className="font-bold">{q}</span>
                 </div>
               )
             )}
 
-            <div class="my-2">
-              <div className="flex flex-col gap-3">
+            <div className="my-2">
+              <div className="flex flex-col items-center gap-3">
                 {CharacterFiltered.map((character) => (
                   <CharacterCard key={character.char_id} {...character} />
                 ))}
