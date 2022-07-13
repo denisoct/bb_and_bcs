@@ -6,7 +6,7 @@ const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="/login" element={<LoginScreen />} />
+        <Route path="/bb_and_bcs/login" element={<LoginScreen />} />
         <Route path="/bb_and_bcs/*" element={<DashBoardRoutes />} />
       </Routes>
     </>
