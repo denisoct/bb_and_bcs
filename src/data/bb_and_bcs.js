@@ -503,7 +503,7 @@ export const bb_and_bcs = [
     name: "Holly White",
     birthday: "Unknown",
     occupation: ["Infant"],
-    img: "https://static.wikia.nocookie.net/breakingbad/images/0/08/Tumblr_lqddc79K9S1qc5omm.png/revision/latest?cb=20111012055605",
+    img: "http://4.bp.blogspot.com/-dJeiqEhSuIg/UjjCyXpDHDI/AAAAAAAAEgo/oqrZ4u9kJWg/s1600/holly1.jpg",
     status: "Alive",
     nickname: "Holly",
     appearance: [2, 3, 4, 5],
