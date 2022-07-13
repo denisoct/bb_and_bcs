@@ -21,7 +21,7 @@ const CharacterCard = ({ char_id, img, name, nickname, portrayed }) => {
           </div>
 
           <div className="self-end">
-            <Link to={`/character/${char_id}`}>
+            <Link to={`/bb_and_bcs/character/${char_id}`}>
               <button className="rounded-md border-[1px] border-slate-500 py-2 px-4 text-zinc-200 transition-all duration-300 ease-linear hover:text-white group-hover:border-none group-hover:bg-slate-800">
                 View More
               </button>

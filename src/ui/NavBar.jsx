@@ -11,7 +11,7 @@ const NavBar = () => {
     <>
       <nav className="absolute top-0 flex w-full flex-row justify-between bg-slate-800 px-3 py-4 font-[Nunito]">
         <div className="flex gap-7">
-          <Link className="text-white/70 no-underline" to="/">
+          <Link className="text-white/70 no-underline" to="/bb_and_bcs">
             ASOCIACIONES
           </Link>
 
@@ -25,7 +25,7 @@ const NavBar = () => {
                   .filter(Boolean)
                   .join(" ")
               }
-              to="/breaking-bad"
+              to="/bb_and_bcs/breaking-bad"
             >
               Breaking Bad
             </NavLink>
@@ -39,7 +39,7 @@ const NavBar = () => {
                   .filter(Boolean)
                   .join(" ")
               }
-              to="/better-call-saul"
+              to="/bb_and_bcs/better-call-saul"
             >
               Better Call Saul
             </NavLink>
@@ -53,7 +53,7 @@ const NavBar = () => {
                   .filter(Boolean)
                   .join(" ")
               }
-              to="/search"
+              to="/bb_and_bcs/search"
             >
               Search
             </NavLink>

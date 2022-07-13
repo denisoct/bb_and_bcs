@@ -4,7 +4,7 @@ const LoginScreen = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate("/breaking-bad", { replace: true });
+    navigate("/bb_and_bcs/breaking-bad", { replace: true });
   };
 
   return (
