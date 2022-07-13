@@ -29,14 +29,13 @@ const CharacterScreen = () => {
     appearance,
     better_call_saul_appearance,
   } = character;
-  // lg:grid lg:grid-flow-col lg:grid-cols-[1fr,2fr]
 
   const categories = category.split(",").map((c) => c.trim());
 
   return (
     <>
       <div className={"fixed inset-0 -z-10 bg-zinc-900"}></div>
-      <div className="my-3 flex flex-col text-white lg:grid lg:grid-cols-[2fr,2fr] lg:justify-items-center">
+      <div className="mt-14 flex w-full flex-col text-white lg:grid lg:grid-cols-[2fr,2fr] lg:justify-items-center">
         <img
           src={img}
           alt={character}
@@ -78,7 +77,7 @@ const CharacterScreen = () => {
                   {appearance.map((value, index) => (
                     <span
                       key={index}
-                      className="cursor-pointer select-none rounded-full bg-slate-800 py-2 px-4 text-white hover:bg-cyan-700"
+                      className="cursor-pointer select-none rounded-full bg-slate-600 py-2 px-4 text-white hover:bg-cyan-700"
                     >
                       {value}
                     </span>
@@ -99,7 +98,7 @@ const CharacterScreen = () => {
                   {better_call_saul_appearance.map((value, index) => (
                     <span
                       key={index}
-                      className="cursor-pointer select-none rounded-full bg-slate-800 py-2 px-4 text-white hover:bg-cyan-700"
+                      className="cursor-pointer select-none rounded-full bg-slate-600 py-2 px-4 text-white hover:bg-cyan-700"
                     >
                       {value}
                     </span>
@@ -110,7 +109,7 @@ const CharacterScreen = () => {
           </div>
 
           <button
-            className="mt-6 flex flex-row gap-3 rounded-md border-none border-slate-500 bg-slate-700 py-2 px-4 text-[1.33rem] text-zinc-200 transition-all duration-300 ease-linear hover:border-none hover:bg-cyan-600 hover:text-white"
+            className="mt-6 flex flex-row gap-3 rounded-md border-none border-slate-500 bg-slate-700 py-2 px-4 text-[1.33rem] text-zinc-200 transition-all duration-300 ease-linear hover:border-none hover:bg-slate-800 hover:text-white"
             onClick={handleReturn}
           >
             Regresar
