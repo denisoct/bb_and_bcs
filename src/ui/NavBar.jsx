@@ -4,7 +4,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("/login");
+    navigate("/bb_and_bcs/login");
   };
 
   return (
