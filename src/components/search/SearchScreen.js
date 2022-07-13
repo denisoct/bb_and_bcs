@@ -24,9 +24,7 @@ export const SearchScreen = () => {
 
   return (
     <>
-      <div
-        className={"fixed inset-x-0 top-0 -z-10 h-full w-full bg-neutral-700"}
-      ></div>
+      <div className={"fixed inset-0 -z-10 bg-zinc-900"}></div>
       <div className="mt-4 px-4 font-[Nunito] text-zinc-50">
         <div className="grid grid-cols-[1fr,1fr] gap-40">
           <div>

@@ -9,7 +9,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="top-0 flex w-full justify-between bg-slate-800 py-4 px-3 font-[Nunito]">
+      <nav className="top-0 flex w-full justify-between bg-slate-800 px-3 py-4 font-[Nunito]">
         <div className="flex gap-4">
           <Link className="text-white/70 no-underline" to="/">
             ASOCIACIONES
