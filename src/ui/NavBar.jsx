@@ -60,8 +60,28 @@ const NavBar = () => {
           </div>
         </div>
 
-        <div className="flex gap-3">
-          <span className="text-cyan-400">Denis Omar</span>
+        <div className="flex gap-7">
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-white">Developers:</span>
+            <span className="text-cyan-400 hover:font-bold">
+              <a
+                href="https://github.com/ElvisJorge17"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Jorge
+              </a>
+            </span>
+            <span className="text-cyan-400 hover:font-bold">
+              <a
+                href="https://github.com/denisomarcuyottito"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Denis Omar
+              </a>
+            </span>
+          </div>
           <button
             className="cursor-pointer border-none bg-inherit font-[Nunito] text-white hover:text-slate-300"
             onClick={handleLogout}
