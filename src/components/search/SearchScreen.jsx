@@ -13,6 +13,7 @@ export const SearchScreen = () => {
   const [value, handleInputChange] = useForm({
     searchText: q,
   });
+
   const { searchText } = value;
 
   const CharacterFiltered = useMemo(() => getCharacterByName(q), [q]);
@@ -25,7 +26,7 @@ export const SearchScreen = () => {
   return (
     <>
       <div className={"fixed inset-0 -z-10 bg-zinc-900"}></div>
-      <div className="mt-4 px-4 font-[Nunito] text-zinc-50">
+      <div className="mt-4 w-full px-4 font-[Nunito] text-zinc-50">
         <div className="grid grid-cols-[1fr,1fr] gap-40">
           <div>
             <div className="text-2xl text-zinc-50">Buscar</div>

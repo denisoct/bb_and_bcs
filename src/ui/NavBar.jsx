@@ -9,13 +9,13 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="top-0 flex w-full justify-between bg-slate-800 px-3 py-4 font-[Nunito]">
-        <div className="flex gap-4">
+      <nav className="absolute top-0 flex w-full flex-row justify-between bg-slate-800 px-3 py-4 font-[Nunito]">
+        <div className="flex gap-7">
           <Link className="text-white/70 no-underline" to="/">
             ASOCIACIONES
           </Link>
 
-          <div className="ml-3 flex gap-5">
+          <div className="flex gap-5  ">
             <NavLink
               className={({ isActive }) =>
                 [
@@ -60,7 +60,7 @@ const NavBar = () => {
           </div>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex gap-3">
           <span className="text-cyan-400">Denis Omar</span>
           <button
             className="cursor-pointer border-none bg-inherit font-[Nunito] text-white hover:text-slate-300"
